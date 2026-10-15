@@ -1,0 +1,90 @@
+.control {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.control::placeholder {
+  color: #98a2b3;
+}
+
+.control:hover {
+  border-color: var(--color-border-hover);
+}
+
+.control:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 88, 214, 0.12);
+}
+
+.control.invalid {
+  border-color: var(--color-error);
+  background: #fffdfd;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.textarea {
+  min-height: 122px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.checkbox {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  margin: 2px 0 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.checkboxInvalid {
+  outline: 2px solid #f0aaa5;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 12px 22px;
+  color: white;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 140ms ease, transform 140ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+.secondary {
+  color: var(--color-text);
+  background: white;
+  border-color: var(--color-border);
+}
